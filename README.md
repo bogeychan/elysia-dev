@@ -11,6 +11,9 @@ bunx elysia-dev@latest --help
 > [!TIP]
 > Use `--loglevel=silent | error | warning` flag to disable logs
 
+> [!CAUTION]
+> This is EXPERIMENTAL software. The CLI / API may change!
+
 ## Usage
 
 ```ts
