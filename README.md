@@ -84,7 +84,7 @@ bunx elysia-dev gen ./app.ts --writer=rest --outfile=./request.http
 
 <summary>Click to view result</summary>
 
-```http
+```
 @protocol = http
 @hostname = localhost
 @port     = 8080
