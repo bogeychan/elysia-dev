@@ -1,3 +1,9 @@
+# 0.0.0-exp.1 - 01 Aug 2024
+
+Improvement:
+
+- Skip WebSocket routes (Unsupported atm)
+
 # 0.0.0-exp.0 - 01 Aug 2024
 
 Feature:
