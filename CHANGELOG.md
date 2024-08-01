@@ -1,3 +1,9 @@
+# 0.0.0-exp.2 - 01 Aug 2024
+
+Improvement:
+
+- Support path params
+
 # 0.0.0-exp.1 - 01 Aug 2024
 
 Improvement:
