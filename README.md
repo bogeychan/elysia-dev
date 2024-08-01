@@ -5,7 +5,7 @@
 With Bun:
 
 ```bash
-bunx elysia-dev@latest --help
+bunx elysia-dev@exp --help
 ```
 
 > [!TIP]
