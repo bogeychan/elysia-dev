@@ -51,7 +51,7 @@ bunx elysia-dev gen ./app.ts --writer=treaty --outfile=./test.test.ts
 ```ts
 import { describe, it, expect } from "bun:test";
 import { treaty } from "@elysiajs/eden";
-import { app } from "../app";
+import { app } from "./app";
 
 await app.modules;
 
