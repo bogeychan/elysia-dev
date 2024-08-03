@@ -1,3 +1,15 @@
+# 0.0.0-exp.5 - 03 Aug 2024
+
+Improvement:
+
+- More detailed logs if `AST` is not available & `type.symbol` not found
+
+# 0.0.0-exp.4 - 03 Aug 2024
+
+Improvement:
+
+- Check for `undefined` of ELysia's `type.symbol`
+
 # 0.0.0-exp.3 - 03 Aug 2024
 
 Improvement:
