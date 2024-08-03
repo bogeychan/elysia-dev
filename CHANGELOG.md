@@ -1,3 +1,9 @@
+# 0.0.0-exp.3 - 03 Aug 2024
+
+Improvement:
+
+- Support `null` and basic `Response`
+
 # 0.0.0-exp.2 - 01 Aug 2024
 
 Improvement:
