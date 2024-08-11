@@ -1,3 +1,9 @@
+# 0.0.0-exp.6 - 11 Aug 2024
+
+Feature:
+
+- Generation CLI for [OpenAPI](https://swagger.io/specification/)
+
 # 0.0.0-exp.5 - 03 Aug 2024
 
 Improvement:

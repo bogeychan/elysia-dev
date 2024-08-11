@@ -13,6 +13,7 @@ bunx elysia-dev@exp --help
 
 > [!CAUTION]
 > This is EXPERIMENTAL software. The CLI / API may change!
+> You have to use `@exp` tag to get latest updates atm!
 
 ## Usage
 
@@ -110,6 +111,118 @@ Content-Type: application/json
 }
 
 ###
+```
+
+</details>
+
+### Generate [OpenAPI](https://swagger.io/specification/) definition file
+
+```bash
+bunx elysia-dev gen ./app.ts --writer=open-api --outfile=./open-api.json
+```
+
+<details>
+
+<summary>Click to view result</summary>
+
+```json
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Elysia Documentation",
+    "description": "Development documentation",
+    "version": "0.0.0"
+  },
+  "paths": {
+    "/": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "age": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        }
+      },
+      "get": {
+        "responses": {
+          "200": {
+            "description": "200",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+</details>
+
+<details>
+
+<summary>Click to see how to integrate the generated definition into Elysia</summary>
+
+Based on [Swagger UI docs](https://github.com/swagger-api/swagger-ui/blob/HEAD/docs/usage/installation.md#unpkg)
+
+```ts
+new Elysia()
+  .get("/json", () => Bun.file(path.join(__dirname, "./open-api.json")))
+  .get("/swagger", ({ set }) => {
+    set.headers["content-type"] = "text/html";
+    const path = "/json";
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SwaggerUI" />
+  <title>SwaggerUI</title>
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5.11.0/swagger-ui.css" />
+</head>
+<body>
+<div id="swagger-ui"></div>
+<script src="https://unpkg.com/swagger-ui-dist@5.11.0/swagger-ui-bundle.js" crossorigin></script>
+<script>
+  window.onload = () => {
+    window.ui = SwaggerUIBundle({
+      url: '${path}',
+      dom_id: '#swagger-ui',
+    });
+  };
+</script>
+</body>
+</html>`;
+  });
 ```
 
 </details>
