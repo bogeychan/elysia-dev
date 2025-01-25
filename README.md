@@ -1,41 +1,62 @@
 # elysia-dev
 
-## Collection of development tools for [Elysia.js](https://elysiajs.com)
-
-With Bun:
-
-```bash
-bunx elysia-dev@exp --help
-```
-
-> [!TIP]
-> Use `--loglevel=silent | error | warning` flag to disable logs
+Collection of development tools for [Elysia.js](https://elysiajs.com)
 
 > [!CAUTION]
 > This is EXPERIMENTAL software. The CLI / API may change!
-> You have to use `@exp` tag to get latest updates atm!
 
-## Usage
+> [!IMPORTANT]
+> Help improve this software by reporting any issues on GitHub
+
+## Supported Parsers & Writers
+
+- Parsers
+
+  - [`typescript`](https://www.typescriptlang.org/)
+  - [`open-api`](https://swagger.io/specification/)
+
+- Writers
+  - [`typescript`](https://www.typescriptlang.org/)
+  - [`open-api`](https://swagger.io/specification/)
+  - [`treaty`](https://elysiajs.com/eden/treaty/overview.html#eden-treaty)
+  - [`rest`](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+
+> [!TIP]
+> You can freely combine parsers and writers, such as using an Open-API parser with a TypeScript writer.
+
+## CLI Usage
+
+With bun:
+
+```bash
+bunx elysia-dev --help
+```
+
+Structure your code like this:
 
 ```ts
 // app.ts
-import { Elysia, t } from "elysia";
+import { Elysia, t } from 'elysia'
 
 // make sure to export the main instance (variable name doesn't matter)
 export const app = new Elysia()
-  .model(
-    "user",
-    t.Object({
-      name: t.String(),
-      age: t.Number(),
-    })
-  )
-  .get("/", () => "yay")
-  .post("/", () => "", { body: "user" });
+	.model(
+		'user',
+		t.Object({
+			name: t.String(),
+			age: t.Number()
+		})
+	)
+	.get('/', () => 'yay')
+	.post('/', () => '', { body: 'user' })
 
-if (process.env.NODE_ENV !== "test") {
-  // we don't need to call `listen` within `bun test`
-  app.listen(8080);
+// below routes are excluded from generation due to `export` above
+
+app.get('/excluded', () => 'excluded')
+
+if (process.env.NODE_ENV !== 'test') {
+	// we don't need to call `listen` within `bun test`
+	app.listen(8080)
 }
 ```
 
@@ -50,30 +71,30 @@ bunx elysia-dev gen ./app.ts --writer=treaty --outfile=./test.test.ts
 <summary>Click to view result</summary>
 
 ```ts
-import { describe, it, expect } from "bun:test";
-import { treaty } from "@elysiajs/eden";
-import { app } from "./app";
+import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { app } from './app'
 
-await app.modules;
+await app.modules
 
-const api = treaty(app);
+const api = treaty(app)
 
-describe("Elysia", () => {
-  it('GET - / - Response: { 200: string; }"', async () => {
-    const { data, error } = await api.index.get();
-    expect(error).toBeNull();
-    expect(data).toBeTypeOf("string");
-  });
+describe('Elysia', () => {
+	it('GET - / - Response: { 200: string; }"', async () => {
+		const { data, error } = await api.index.get()
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
 
-  it('POST - /user - Request: { name: string; age: number; } - Response: { 200: string; }"', async () => {
-    const { data, error } = await api.user.post({
-      name: "Bogeychan",
-      age: 42,
-    });
-    expect(error).toBeNull();
-    expect(data).toBeTypeOf("string");
-  });
-});
+	it('POST - /user - Request: { name: string; age: number; } - Response: { 200: string; }"', async () => {
+		const { data, error } = await api.user.post({
+			name: 'Bogeychan',
+			age: 42
+		})
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
+})
 ```
 
 </details>
@@ -127,62 +148,62 @@ bunx elysia-dev gen ./app.ts --writer=open-api --outfile=./open-api.json
 
 ```json
 {
-  "openapi": "3.1.0",
-  "info": {
-    "title": "Elysia Documentation",
-    "description": "Development documentation",
-    "version": "0.0.0"
-  },
-  "paths": {
-    "/": {
-      "post": {
-        "responses": {
-          "200": {
-            "description": "200",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
-                  },
-                  "age": {
-                    "type": "number"
-                  }
-                }
-              }
-            }
-          },
-          "required": true
-        }
-      },
-      "get": {
-        "responses": {
-          "200": {
-            "description": "200",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/": {
+			"post": {
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"age": {
+										"type": "number"
+									}
+								}
+							}
+						}
+					},
+					"required": true
+				}
+			},
+			"get": {
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 ```
 
@@ -196,11 +217,11 @@ Based on [Swagger UI docs](https://github.com/swagger-api/swagger-ui/blob/HEAD/d
 
 ```ts
 new Elysia()
-  .get("/json", () => Bun.file(path.join(__dirname, "./open-api.json")))
-  .get("/swagger", ({ set }) => {
-    set.headers["content-type"] = "text/html";
-    const path = "/json";
-    return `<!DOCTYPE html>
+	.get('/json', () => Bun.file('./open-api.json'))
+	.get('/swagger', ({ set }) => {
+		set.headers['content-type'] = 'text/html'
+		const path = '/json'
+		return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -221,11 +242,39 @@ new Elysia()
   };
 </script>
 </body>
-</html>`;
-  });
+</html>`
+	})
 ```
 
 </details>
+
+### API Usage
+
+```bash
+bun add elysia-dev -D
+```
+
+#### Generate `open-api` definition file using `typescript` parser
+
+```typescript
+import { gen } from 'elysia-dev'
+
+await gen({
+	entrypoint: './app.ts',
+	parse: {
+		$type: 'typescript'
+	},
+	outFile: './open-api.json',
+	write: {
+		$type: 'open-api'
+	},
+	logging: {
+		level: 'silent' // disable logging
+	}
+})
+```
+
+Checkout the [examples](./examples) folder.
 
 ## License
 

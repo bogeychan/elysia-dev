@@ -1,0 +1,302 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TypeScript-Writer writing params.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().get("/yay/:id", () => { }, {
+    params: t.Object({
+        id: t.String()
+    }),
+    response: {
+        200: t.String(),
+        422: t.Object({
+            type: t.Literal("validation"),
+            on: t.String(),
+            summary: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            message: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            found: t.Unknown(),
+            property: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            expected: t.Union([
+                t.Undefined(),
+                t.String()
+            ])
+        })
+    }
+}).get("/whelp/:id/:name", () => { }, {
+    params: t.Object({
+        id: t.String(),
+        name: t.String()
+    }),
+    response: {
+        200: t.String(),
+        422: t.Object({
+            type: t.Literal("validation"),
+            on: t.String(),
+            summary: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            message: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            found: t.Unknown(),
+            property: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            expected: t.Union([
+                t.Undefined(),
+                t.String()
+            ])
+        })
+    }
+});
+"
+`;
+
+exports[`TypeScript-Writer writing basic.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().get("/", () => { }, {
+    response: {
+        200: t.String()
+    }
+});
+"
+`;
+
+exports[`TypeScript-Writer writing plugin.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().get("/", () => { }, {
+    response: {
+        200: t.String()
+    }
+});
+"
+`;
+
+exports[`TypeScript-Writer writing prefix-group.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().get("/prefix/prefix-route", () => { }, {
+    response: {
+        200: t.Void()
+    }
+}).get("/prefix/prefix-group/inner-group/inner-route", () => { }, {
+    response: {
+        200: t.String()
+    }
+});
+"
+`;
+
+exports[`TypeScript-Writer writing listen-object-shorthand.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().get("/", () => { }, {
+    response: {
+        200: t.String()
+    }
+});
+"
+`;
+
+exports[`TypeScript-Writer writing response.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().get("/", () => { }, {
+    response: {
+        200: t.Object({})
+    }
+});
+"
+`;
+
+exports[`TypeScript-Writer writing void.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().get("/", () => { }, {
+    response: {
+        200: t.Void()
+    }
+});
+"
+`;
+
+exports[`TypeScript-Writer writing model-condition.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().post("/", () => { }, {
+    body: t.Union([
+        t.String(),
+        t.Object({
+            name: t.String(),
+            age: t.Number()
+        })
+    ]),
+    response: {
+        200: t.String(),
+        422: t.Object({
+            type: t.Literal("validation"),
+            on: t.String(),
+            summary: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            message: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            found: t.Unknown(),
+            property: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            expected: t.Union([
+                t.Undefined(),
+                t.String()
+            ])
+        })
+    }
+});
+"
+`;
+
+exports[`TypeScript-Writer writing prefix.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().get("/prefix", () => { }, {
+    response: {
+        200: t.String()
+    }
+});
+"
+`;
+
+exports[`TypeScript-Writer writing listen-port.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().get("/", () => { }, {
+    response: {
+        200: t.String()
+    }
+});
+"
+`;
+
+exports[`TypeScript-Writer writing route-intersaction.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().post("/", () => { }, {
+    response: {
+        200: t.Number()
+    }
+}).get("/", () => { }, {
+    response: {
+        200: t.String()
+    }
+});
+"
+`;
+
+exports[`TypeScript-Writer writing ws.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().get("/", () => { }, {
+    response: {
+        200: t.String()
+    }
+});
+"
+`;
+
+exports[`TypeScript-Writer writing model.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().post("/", () => { }, {
+    body: t.Object({
+        name: t.String(),
+        age: t.Number()
+    }),
+    response: {
+        200: t.String(),
+        422: t.Object({
+            type: t.Literal("validation"),
+            on: t.String(),
+            summary: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            message: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            found: t.Unknown(),
+            property: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            expected: t.Union([
+                t.Undefined(),
+                t.String()
+            ])
+        })
+    }
+});
+"
+`;
+
+exports[`TypeScript-Writer writing schema.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().get("/:param", () => { }, {
+    params: t.Object({
+        param: t.Union([
+            t.String(),
+            t.Number()
+        ])
+    }),
+    query: t.Object({
+        query: t.String()
+    }),
+    headers: t.Object({
+        head: t.String()
+    }),
+    response: {
+        200: t.Union([
+            t.String(),
+            t.Number()
+        ]),
+        400: t.Array(t.String()),
+        422: t.Object({
+            type: t.Literal("validation"),
+            on: t.String(),
+            summary: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            message: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            found: t.Unknown(),
+            property: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            expected: t.Union([
+                t.Undefined(),
+                t.String()
+            ])
+        })
+    }
+});
+"
+`;
+
+exports[`TypeScript-Writer writing listen-object.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().get("/", () => { }, {
+    response: {
+        200: t.String()
+    }
+});
+"
+`;

@@ -1,0 +1,56 @@
+{
+  "name": "elysia-dev",
+  "version": "0.1.0",
+  "description": "Development tools for Elysia.js",
+  "author": {
+    "name": "bogeychan",
+    "url": "https://github.com/bogeychan",
+    "email": "bogeychan@outlook.com"
+  },
+  "type": "module",
+  "bin": {
+    "elysia-dev": "bin/index.ts"
+  },
+  "license": "MIT",
+  "files": [
+    "bin/",
+    "dist/"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": "./dist/index.js",
+  "keywords": [
+    "elysia",
+    "tools",
+    "rest-client",
+    "eden-treaty"
+  ],
+  "homepage": "https://github.com/bogeychan/elysia-dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bogeychan/elysia-dev"
+  },
+  "bugs": "https://github.com/bogeychan/elysia-dev/issues",
+  "scripts": {
+    "dev": "bun run --watch examples/index.ts",
+    "test": "bun test",
+    "build": "bun run ./build.ts",
+    "release": "bun run build && bun run test && npm publish --access public"
+  },
+  "peerDependencies": {
+    "elysia": ">= 1.2.10"
+  },
+  "devDependencies": {
+    "@elysiajs/eden": "^1.2.0",
+    "@faker-js/faker": "^9.4.0",
+    "@types/bun": "^1.2.0",
+    "consola": "^3.4.0",
+    "elysia": "^1.2.10",
+    "eslint": "^9.19.0",
+    "openapi-types": "^12.1.3",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "commander": "^13.1.0"
+  }
+}

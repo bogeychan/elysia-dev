@@ -1,3 +1,15 @@
+# 0.1.0 - 25 Jan 2025
+
+Feature:
+
+- New `open-api` parser
+- New `typescript` writer
+
+Bug fix:
+
+- bump `elysia` to `1.2.10`
+- Various minor bug fixes...
+
 # 0.0.0-exp.6 - 11 Aug 2024
 
 Feature:

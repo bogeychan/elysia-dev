@@ -1,0 +1,312 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Treaty-Writer writing params.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { server } from './whelp'
+\t
+await server.modules
+
+const api = treaty(server)
+
+describe('Elysia', () => {
+\tit('GET - /yay/:id - Response: test"', async () => {
+\t\tconst { data, error } = await api.yay({ "id": "##TEST##" }).get()
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('string')
+\t})
+
+\tit('GET - /whelp/:id/:name - Response: test"', async () => {
+\t\tconst { data, error } = await api.whelp({ "id": "##TEST##" })({ "name": "##TEST##" }).get()
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('string')
+\t})
+
+})"
+`;
+
+exports[`Treaty-Writer writing basic.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { server } from './whelp'
+\t
+await server.modules
+
+const api = treaty(server)
+
+describe('Elysia', () => {
+\tit('GET - / - Response: test"', async () => {
+\t\tconst { data, error } = await api.index.get()
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('string')
+\t})
+
+})"
+`;
+
+exports[`Treaty-Writer writing plugin.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { app } from './whelp'
+\t
+await app.modules
+
+const api = treaty(app)
+
+describe('Elysia', () => {
+\tit('GET - / - Response: test"', async () => {
+\t\tconst { data, error } = await api.index.get()
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('string')
+\t})
+
+})"
+`;
+
+exports[`Treaty-Writer writing prefix-group.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { server } from './whelp'
+\t
+await server.modules
+
+const api = treaty(server)
+
+describe('Elysia', () => {
+\tit('GET - /prefix/prefix-route - Response: test"', async () => {
+\t\tconst { data, error } = await api.prefix.prefix-route.get()
+\t\texpect(error).toBeNull()
+\t\t
+\t})
+
+\tit('GET - /prefix/prefix-group/inner-group/inner-route - Response: test"', async () => {
+\t\tconst { data, error } = await api.prefix.prefix-group.inner-group.inner-route.get()
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('string')
+\t})
+
+})"
+`;
+
+exports[`Treaty-Writer writing listen-object-shorthand.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { server } from './whelp'
+\t
+await server.modules
+
+const api = treaty(server)
+
+describe('Elysia', () => {
+\tit('GET - / - Response: test"', async () => {
+\t\tconst { data, error } = await api.index.get()
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('string')
+\t})
+
+})"
+`;
+
+exports[`Treaty-Writer writing response.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { server } from './whelp'
+\t
+await server.modules
+
+const api = treaty(server)
+
+describe('Elysia', () => {
+\tit('GET - / - Response: test"', async () => {
+\t\tconst { data, error } = await api.index.get()
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('object')
+\t})
+
+})"
+`;
+
+exports[`Treaty-Writer writing void.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { server } from './whelp'
+\t
+await server.modules
+
+const api = treaty(server)
+
+describe('Elysia', () => {
+\tit('GET - / - Response: test"', async () => {
+\t\tconst { data, error } = await api.index.get()
+\t\texpect(error).toBeNull()
+\t\t
+\t})
+
+})"
+`;
+
+exports[`Treaty-Writer writing model-condition.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { app } from './whelp'
+\t
+await app.modules
+
+const api = treaty(app)
+
+describe('Elysia', () => {
+\t// >>> UNION
+\tit('POST - / - Response: test"', async () => {
+\t\tconst { data, error } = await api.index.post("##TEST##")
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('string')
+\t})
+
+\tit('POST - / - Request: test - Response: test"', async () => {
+\t\tconst { data, error } = await api.index.post({"name":"##TEST##","age":42})
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('string')
+\t})
+\t// <<< UNION
+
+})"
+`;
+
+exports[`Treaty-Writer writing prefix.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { app } from './whelp'
+\t
+await app.modules
+
+const api = treaty(app)
+
+describe('Elysia', () => {
+\tit('GET - /prefix - Response: test"', async () => {
+\t\tconst { data, error } = await api.prefix.index.get()
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('string')
+\t})
+
+})"
+`;
+
+exports[`Treaty-Writer writing listen-port.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { server } from './whelp'
+\t
+await server.modules
+
+const api = treaty(server)
+
+describe('Elysia', () => {
+\tit('GET - / - Response: test"', async () => {
+\t\tconst { data, error } = await api.index.get()
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('string')
+\t})
+
+})"
+`;
+
+exports[`Treaty-Writer writing route-intersaction.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { server } from './whelp'
+\t
+await server.modules
+
+const api = treaty(server)
+
+describe('Elysia', () => {
+\tit('POST - / - Response: test"', async () => {
+\t\tconst { data, error } = await api.index.post()
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('number')
+\t})
+
+\tit('GET - / - Response: test"', async () => {
+\t\tconst { data, error } = await api.index.get()
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('string')
+\t})
+
+})"
+`;
+
+exports[`Treaty-Writer writing ws.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { app } from './whelp'
+\t
+await app.modules
+
+const api = treaty(app)
+
+describe('Elysia', () => {
+\tit('GET - / - Response: test"', async () => {
+\t\tconst { data, error } = await api.index.get()
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('string')
+\t})
+
+})"
+`;
+
+exports[`Treaty-Writer writing model.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { app } from './whelp'
+\t
+await app.modules
+
+const api = treaty(app)
+
+describe('Elysia', () => {
+\tit('POST - / - Request: test - Response: test"', async () => {
+\t\tconst { data, error } = await api.index.post({"name":"##TEST##","age":42})
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('string')
+\t})
+
+})"
+`;
+
+exports[`Treaty-Writer writing schema.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { server } from './whelp'
+\t
+await server.modules
+
+const api = treaty(server)
+
+describe('Elysia', () => {
+\tit('GET - /:param - Response: test"', async () => {
+\t\tconst { data, error } = await api.index({ "param": "##TEST##" }).get()
+\t\texpect(error).toBeNull()
+\t\t
+\t})
+
+})"
+`;
+
+exports[`Treaty-Writer writing listen-object.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { server } from './whelp'
+\t
+await server.modules
+
+const api = treaty(server)
+
+describe('Elysia', () => {
+\tit('GET - / - Response: test"', async () => {
+\t\tconst { data, error } = await api.index.get()
+\t\texpect(error).toBeNull()
+\t\texpect(data).toBeTypeOf('string')
+\t})
+
+})"
+`;

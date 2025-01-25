@@ -1,0 +1,11 @@
+.git
+.gitignore
+.env
+.env.local
+
+node_modules
+
+src
+examples
+tests
+CHANGELOG.md

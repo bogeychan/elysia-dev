@@ -1,0 +1,1366 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TypeScript-Parser parsing params.ts should match snapshot 1`] = `
+{
+  "exportName": "server",
+  "origin": {
+    "hostname": "localhost",
+    "port": 80,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "whelp": {
+          "$type": "object",
+          "entries": {
+            ":id": {
+              "$type": "object",
+              "entries": {
+                ":name": {
+                  "$type": "object",
+                  "entries": {
+                    "get": {
+                      "$type": "object",
+                      "entries": {
+                        "body": {
+                          "$type": "unknown",
+                        },
+                        "headers": {
+                          "$type": "unknown",
+                        },
+                        "params": {
+                          "$type": "object",
+                          "entries": {
+                            "id": {
+                              "$type": "string",
+                            },
+                            "name": {
+                              "$type": "string",
+                            },
+                          },
+                          "text": "test",
+                        },
+                        "query": {
+                          "$type": "unknown",
+                        },
+                        "response": {
+                          "$type": "object",
+                          "entries": {
+                            "200": {
+                              "$type": "string",
+                            },
+                            "422": {
+                              "$type": "object",
+                              "entries": {
+                                "expected": {
+                                  "$type": "union",
+                                  "text": "test",
+                                  "types": [
+                                    {
+                                      "$type": "undefined",
+                                    },
+                                    {
+                                      "$type": "string",
+                                    },
+                                  ],
+                                },
+                                "found": {
+                                  "$type": "unknown",
+                                },
+                                "message": {
+                                  "$type": "union",
+                                  "text": "test",
+                                  "types": [
+                                    {
+                                      "$type": "undefined",
+                                    },
+                                    {
+                                      "$type": "string",
+                                    },
+                                  ],
+                                },
+                                "on": {
+                                  "$type": "string",
+                                },
+                                "property": {
+                                  "$type": "union",
+                                  "text": "test",
+                                  "types": [
+                                    {
+                                      "$type": "undefined",
+                                    },
+                                    {
+                                      "$type": "string",
+                                    },
+                                  ],
+                                },
+                                "summary": {
+                                  "$type": "union",
+                                  "text": "test",
+                                  "types": [
+                                    {
+                                      "$type": "undefined",
+                                    },
+                                    {
+                                      "$type": "string",
+                                    },
+                                  ],
+                                },
+                                "type": "validation",
+                              },
+                              "text": "test",
+                            },
+                          },
+                          "text": "test",
+                        },
+                      },
+                      "text": "test",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+        "yay": {
+          "$type": "object",
+          "entries": {
+            ":id": {
+              "$type": "object",
+              "entries": {
+                "get": {
+                  "$type": "object",
+                  "entries": {
+                    "body": {
+                      "$type": "unknown",
+                    },
+                    "headers": {
+                      "$type": "unknown",
+                    },
+                    "params": {
+                      "$type": "object",
+                      "entries": {
+                        "id": {
+                          "$type": "string",
+                        },
+                      },
+                      "text": "test",
+                    },
+                    "query": {
+                      "$type": "unknown",
+                    },
+                    "response": {
+                      "$type": "object",
+                      "entries": {
+                        "200": {
+                          "$type": "string",
+                        },
+                        "422": {
+                          "$type": "object",
+                          "entries": {
+                            "expected": {
+                              "$type": "union",
+                              "text": "test",
+                              "types": [
+                                {
+                                  "$type": "undefined",
+                                },
+                                {
+                                  "$type": "string",
+                                },
+                              ],
+                            },
+                            "found": {
+                              "$type": "unknown",
+                            },
+                            "message": {
+                              "$type": "union",
+                              "text": "test",
+                              "types": [
+                                {
+                                  "$type": "undefined",
+                                },
+                                {
+                                  "$type": "string",
+                                },
+                              ],
+                            },
+                            "on": {
+                              "$type": "string",
+                            },
+                            "property": {
+                              "$type": "union",
+                              "text": "test",
+                              "types": [
+                                {
+                                  "$type": "undefined",
+                                },
+                                {
+                                  "$type": "string",
+                                },
+                              ],
+                            },
+                            "summary": {
+                              "$type": "union",
+                              "text": "test",
+                              "types": [
+                                {
+                                  "$type": "undefined",
+                                },
+                                {
+                                  "$type": "string",
+                                },
+                              ],
+                            },
+                            "type": "validation",
+                          },
+                          "text": "test",
+                        },
+                      },
+                      "text": "test",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+      },
+      "text": "{ yay: { ":id": { get: { body: unknown; params: { id: string; }; query: unknown; headers: unknown; response: { 200: string; 422: { type: "validation"; on: string; summary?: string | undefined; message?: string | undefined; found?: unknown; property?: string | undefined; expected?: string | undefined; }; }; }; }; }; ...",
+    },
+  },
+}
+`;
+
+exports[`TypeScript-Parser parsing basic.ts should match snapshot 1`] = `
+{
+  "exportName": "server",
+  "origin": {
+    "hostname": "localhost",
+    "port": 80,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "index": {
+          "$type": "object",
+          "entries": {
+            "get": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "unknown",
+                },
+                "headers": {
+                  "$type": "unknown",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {},
+                  "text": "test",
+                },
+                "query": {
+                  "$type": "unknown",
+                },
+                "response": {
+                  "$type": "object",
+                  "entries": {
+                    "200": {
+                      "$type": "string",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+      },
+      "text": "test",
+    },
+  },
+}
+`;
+
+exports[`TypeScript-Parser parsing plugin.ts should match snapshot 1`] = `
+{
+  "exportName": "app",
+  "origin": {
+    "hostname": "localhost",
+    "port": 80,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "index": {
+          "$type": "object",
+          "entries": {
+            "get": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "unknown",
+                },
+                "headers": {
+                  "$type": "unknown",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {},
+                  "text": "test",
+                },
+                "query": {
+                  "$type": "unknown",
+                },
+                "response": {
+                  "$type": "object",
+                  "entries": {
+                    "200": {
+                      "$type": "string",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+      },
+      "text": "test",
+    },
+  },
+}
+`;
+
+exports[`TypeScript-Parser parsing prefix-group.ts should match snapshot 1`] = `
+{
+  "exportName": "server",
+  "origin": {
+    "hostname": "localhost",
+    "port": 80,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "prefix": {
+          "$type": "object",
+          "entries": {
+            "prefix-group": {
+              "$type": "object",
+              "entries": {
+                "inner-group": {
+                  "$type": "object",
+                  "entries": {
+                    "inner-route": {
+                      "$type": "object",
+                      "entries": {
+                        "get": {
+                          "$type": "object",
+                          "entries": {
+                            "body": {
+                              "$type": "unknown",
+                            },
+                            "headers": {
+                              "$type": "unknown",
+                            },
+                            "params": {
+                              "$type": "object",
+                              "entries": {},
+                              "text": "test",
+                            },
+                            "query": {
+                              "$type": "unknown",
+                            },
+                            "response": {
+                              "$type": "object",
+                              "entries": {
+                                "200": {
+                                  "$type": "string",
+                                },
+                              },
+                              "text": "test",
+                            },
+                          },
+                          "text": "test",
+                        },
+                      },
+                      "text": "test",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+            "prefix-route": {
+              "$type": "object",
+              "entries": {
+                "get": {
+                  "$type": "object",
+                  "entries": {
+                    "body": {
+                      "$type": "unknown",
+                    },
+                    "headers": {
+                      "$type": "unknown",
+                    },
+                    "params": {
+                      "$type": "object",
+                      "entries": {},
+                      "text": "test",
+                    },
+                    "query": {
+                      "$type": "unknown",
+                    },
+                    "response": {
+                      "$type": "object",
+                      "entries": {
+                        "200": {
+                          "$type": "void",
+                        },
+                      },
+                      "text": "test",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "{ "prefix-route": { get: { body: unknown; params: {}; query: unknown; headers: unknown; response: { 200: void; }; }; }; } & { "prefix-group": { "inner-group": { "inner-route": { get: { body: unknown; params: {}; query: unknown; headers: unknown; response: { 200: string; }; }; }; }; }; }",
+        },
+      },
+      "text": "test",
+    },
+  },
+}
+`;
+
+exports[`TypeScript-Parser parsing listen-object-shorthand.ts should match snapshot 1`] = `
+{
+  "exportName": "server",
+  "origin": {
+    "hostname": "127.0.0.1",
+    "port": 5000,
+    "protocol": "https",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "index": {
+          "$type": "object",
+          "entries": {
+            "get": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "unknown",
+                },
+                "headers": {
+                  "$type": "unknown",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {},
+                  "text": "test",
+                },
+                "query": {
+                  "$type": "unknown",
+                },
+                "response": {
+                  "$type": "object",
+                  "entries": {
+                    "200": {
+                      "$type": "string",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+      },
+      "text": "test",
+    },
+  },
+}
+`;
+
+exports[`TypeScript-Parser parsing response.ts should match snapshot 1`] = `
+{
+  "exportName": "server",
+  "origin": {
+    "hostname": "localhost",
+    "port": 80,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "index": {
+          "$type": "object",
+          "entries": {
+            "get": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "unknown",
+                },
+                "headers": {
+                  "$type": "unknown",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {},
+                  "text": "test",
+                },
+                "query": {
+                  "$type": "unknown",
+                },
+                "response": {
+                  "$type": "object",
+                  "entries": {
+                    "200": {
+                      "$type": "object",
+                      "entries": {},
+                      "text": "Response",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+      },
+      "text": "test",
+    },
+  },
+}
+`;
+
+exports[`TypeScript-Parser parsing void.ts should match snapshot 1`] = `
+{
+  "exportName": "server",
+  "origin": {
+    "hostname": "localhost",
+    "port": 80,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "index": {
+          "$type": "object",
+          "entries": {
+            "get": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "unknown",
+                },
+                "headers": {
+                  "$type": "unknown",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {},
+                  "text": "test",
+                },
+                "query": {
+                  "$type": "unknown",
+                },
+                "response": {
+                  "$type": "object",
+                  "entries": {
+                    "200": {
+                      "$type": "void",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+      },
+      "text": "test",
+    },
+  },
+}
+`;
+
+exports[`TypeScript-Parser parsing model-condition.ts should match snapshot 1`] = `
+{
+  "exportName": "app",
+  "origin": {
+    "hostname": "localhost",
+    "port": 80,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "index": {
+          "$type": "object",
+          "entries": {
+            "post": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "union",
+                  "text": "test",
+                  "types": [
+                    {
+                      "$type": "string",
+                    },
+                    {
+                      "$type": "object",
+                      "entries": {
+                        "age": {
+                          "$type": "number",
+                        },
+                        "name": {
+                          "$type": "string",
+                        },
+                      },
+                      "text": "test",
+                    },
+                  ],
+                },
+                "headers": {
+                  "$type": "unknown",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {},
+                  "text": "test",
+                },
+                "query": {
+                  "$type": "unknown",
+                },
+                "response": {
+                  "$type": "object",
+                  "entries": {
+                    "200": {
+                      "$type": "string",
+                    },
+                    "422": {
+                      "$type": "object",
+                      "entries": {
+                        "expected": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "found": {
+                          "$type": "unknown",
+                        },
+                        "message": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "on": {
+                          "$type": "string",
+                        },
+                        "property": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "summary": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "type": "validation",
+                      },
+                      "text": "test",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+      },
+      "text": "test",
+    },
+  },
+}
+`;
+
+exports[`TypeScript-Parser parsing prefix.ts should match snapshot 1`] = `
+{
+  "exportName": "app",
+  "origin": {
+    "hostname": "localhost",
+    "port": 80,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "prefix": {
+          "$type": "object",
+          "entries": {
+            "index": {
+              "$type": "object",
+              "entries": {
+                "get": {
+                  "$type": "object",
+                  "entries": {
+                    "body": {
+                      "$type": "unknown",
+                    },
+                    "headers": {
+                      "$type": "unknown",
+                    },
+                    "params": {
+                      "$type": "object",
+                      "entries": {},
+                      "text": "test",
+                    },
+                    "query": {
+                      "$type": "unknown",
+                    },
+                    "response": {
+                      "$type": "object",
+                      "entries": {
+                        "200": {
+                          "$type": "string",
+                        },
+                      },
+                      "text": "test",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+      },
+      "text": "test",
+    },
+  },
+}
+`;
+
+exports[`TypeScript-Parser parsing listen-port.ts should match snapshot 1`] = `
+{
+  "exportName": "server",
+  "origin": {
+    "hostname": "localhost",
+    "port": 8080,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "index": {
+          "$type": "object",
+          "entries": {
+            "get": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "unknown",
+                },
+                "headers": {
+                  "$type": "unknown",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {},
+                  "text": "test",
+                },
+                "query": {
+                  "$type": "unknown",
+                },
+                "response": {
+                  "$type": "object",
+                  "entries": {
+                    "200": {
+                      "$type": "string",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+      },
+      "text": "test",
+    },
+  },
+}
+`;
+
+exports[`TypeScript-Parser parsing route-intersaction.ts should match snapshot 1`] = `
+{
+  "exportName": "server",
+  "origin": {
+    "hostname": "localhost",
+    "port": 80,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "index": {
+          "$type": "object",
+          "entries": {
+            "get": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "unknown",
+                },
+                "headers": {
+                  "$type": "unknown",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {},
+                  "text": "test",
+                },
+                "query": {
+                  "$type": "unknown",
+                },
+                "response": {
+                  "$type": "object",
+                  "entries": {
+                    "200": {
+                      "$type": "string",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+            "post": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "unknown",
+                },
+                "headers": {
+                  "$type": "unknown",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {},
+                  "text": "test",
+                },
+                "query": {
+                  "$type": "unknown",
+                },
+                "response": {
+                  "$type": "object",
+                  "entries": {
+                    "200": {
+                      "$type": "number",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+      },
+      "text": "{ index: { get: { body: unknown; params: {}; query: unknown; headers: unknown; response: { 200: string; }; }; }; } & { index: { post: { body: unknown; params: {}; query: unknown; headers: unknown; response: { 200: number; }; }; }; }",
+    },
+  },
+}
+`;
+
+exports[`TypeScript-Parser parsing ws.ts should match snapshot 1`] = `
+{
+  "exportName": "app",
+  "origin": {
+    "hostname": "localhost",
+    "port": 8080,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "index": {
+          "$type": "object",
+          "entries": {
+            "get": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "unknown",
+                },
+                "headers": {
+                  "$type": "unknown",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {},
+                  "text": "test",
+                },
+                "query": {
+                  "$type": "unknown",
+                },
+                "response": {
+                  "$type": "object",
+                  "entries": {
+                    "200": {
+                      "$type": "string",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+        "ws": {
+          "$type": "object",
+          "entries": {
+            "subscribe": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "unknown",
+                },
+                "headers": {
+                  "$type": "unknown",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {},
+                  "text": "test",
+                },
+                "query": {
+                  "$type": "unknown",
+                },
+                "response": {
+                  "$type": "unknown",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+      },
+      "text": "{ ws: { subscribe: { body: unknown; params: {}; query: unknown; headers: unknown; response: unknown; }; }; } & { index: { get: { body: unknown; params: {}; query: unknown; headers: unknown; response: { 200: string; }; }; }; }",
+    },
+  },
+}
+`;
+
+exports[`TypeScript-Parser parsing model.ts should match snapshot 1`] = `
+{
+  "exportName": "app",
+  "origin": {
+    "hostname": "localhost",
+    "port": 80,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "index": {
+          "$type": "object",
+          "entries": {
+            "post": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "object",
+                  "entries": {
+                    "age": {
+                      "$type": "number",
+                    },
+                    "name": {
+                      "$type": "string",
+                    },
+                  },
+                  "text": "test",
+                },
+                "headers": {
+                  "$type": "unknown",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {},
+                  "text": "test",
+                },
+                "query": {
+                  "$type": "unknown",
+                },
+                "response": {
+                  "$type": "object",
+                  "entries": {
+                    "200": {
+                      "$type": "string",
+                    },
+                    "422": {
+                      "$type": "object",
+                      "entries": {
+                        "expected": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "found": {
+                          "$type": "unknown",
+                        },
+                        "message": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "on": {
+                          "$type": "string",
+                        },
+                        "property": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "summary": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "type": "validation",
+                      },
+                      "text": "test",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+      },
+      "text": "test",
+    },
+  },
+}
+`;
+
+exports[`TypeScript-Parser parsing schema.ts should match snapshot 1`] = `
+{
+  "exportName": "server",
+  "origin": {
+    "hostname": "localhost",
+    "port": 80,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        ":param": {
+          "$type": "object",
+          "entries": {
+            "get": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "unknown",
+                },
+                "headers": {
+                  "$type": "object",
+                  "entries": {
+                    "head": {
+                      "$type": "string",
+                    },
+                  },
+                  "text": "test",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {
+                    "param": {
+                      "$type": "union",
+                      "text": "test",
+                      "types": [
+                        {
+                          "$type": "string",
+                        },
+                        {
+                          "$type": "number",
+                        },
+                      ],
+                    },
+                  },
+                  "text": "test",
+                },
+                "query": {
+                  "$type": "object",
+                  "entries": {
+                    "query": {
+                      "$type": "string",
+                    },
+                  },
+                  "text": "test",
+                },
+                "response": {
+                  "$type": "object",
+                  "entries": {
+                    "200": {
+                      "$type": "union",
+                      "text": "test",
+                      "types": [
+                        {
+                          "$type": "string",
+                        },
+                        {
+                          "$type": "number",
+                        },
+                      ],
+                    },
+                    "400": {
+                      "$type": "array",
+                      "entry": {
+                        "$type": "string",
+                      },
+                    },
+                    "422": {
+                      "$type": "object",
+                      "entries": {
+                        "expected": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "found": {
+                          "$type": "unknown",
+                        },
+                        "message": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "on": {
+                          "$type": "string",
+                        },
+                        "property": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "summary": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "type": "validation",
+                      },
+                      "text": "test",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+      },
+      "text": "test",
+    },
+  },
+}
+`;
+
+exports[`TypeScript-Parser parsing listen-object.ts should match snapshot 1`] = `
+{
+  "exportName": "server",
+  "origin": {
+    "hostname": "127.0.0.1",
+    "port": 5000,
+    "protocol": "https",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "index": {
+          "$type": "object",
+          "entries": {
+            "get": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "unknown",
+                },
+                "headers": {
+                  "$type": "unknown",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {},
+                  "text": "test",
+                },
+                "query": {
+                  "$type": "unknown",
+                },
+                "response": {
+                  "$type": "object",
+                  "entries": {
+                    "200": {
+                      "$type": "string",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+      },
+      "text": "test",
+    },
+  },
+}
+`;

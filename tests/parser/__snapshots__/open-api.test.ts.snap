@@ -1,0 +1,98 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OpenAPI-Parser parsing schema.json should match snapshot 1`] = `
+{
+  "exportName": "",
+  "origin": {
+    "hostname": "localhost",
+    "port": 80,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        ":param": {
+          "$type": "object",
+          "entries": {
+            "get": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "unknown",
+                },
+                "cookie": {
+                  "$type": "unknown",
+                },
+                "headers": {
+                  "$type": "object",
+                  "entries": {
+                    "head": {
+                      "$type": "string",
+                    },
+                  },
+                  "text": "",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {
+                    "param": {
+                      "$type": "union",
+                      "text": "",
+                      "types": [
+                        {
+                          "$type": "string",
+                        },
+                        {
+                          "$type": "number",
+                        },
+                      ],
+                    },
+                  },
+                  "text": "",
+                },
+                "query": {
+                  "$type": "object",
+                  "entries": {
+                    "query": {
+                      "$type": "string",
+                    },
+                  },
+                  "text": "",
+                },
+                "response": {
+                  "$type": "object",
+                  "entries": {
+                    "200": {
+                      "$type": "union",
+                      "text": "",
+                      "types": [
+                        {
+                          "$type": "string",
+                        },
+                        {
+                          "$type": "number",
+                        },
+                      ],
+                    },
+                    "400": {
+                      "$type": "array",
+                      "entry": {
+                        "$type": "string",
+                      },
+                    },
+                  },
+                  "text": "",
+                },
+              },
+              "text": "",
+            },
+          },
+          "text": "",
+        },
+      },
+      "text": "",
+    },
+  },
+}
+`;

@@ -1,0 +1,339 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rest-Writer writing params.ts should match snapshot 1`] = `
+"
+@protocol = http
+@hostname = localhost
+@port     = 80
+@origin   = {{protocol}}://{{hostname}}:{{port}}
+
+###
+
+# yay.:id
+GET {{origin}}/yay/##TEST## HTTP/1.1
+
+
+
+
+###
+
+# whelp.:id.:name
+GET {{origin}}/whelp/##TEST##/##TEST## HTTP/1.1
+
+
+
+
+###
+
+"
+`;
+
+exports[`Rest-Writer writing basic.ts should match snapshot 1`] = `
+"
+@protocol = http
+@hostname = localhost
+@port     = 80
+@origin   = {{protocol}}://{{hostname}}:{{port}}
+
+###
+
+# index
+GET {{origin}}/ HTTP/1.1
+
+
+
+
+###
+
+"
+`;
+
+exports[`Rest-Writer writing plugin.ts should match snapshot 1`] = `
+"
+@protocol = http
+@hostname = localhost
+@port     = 80
+@origin   = {{protocol}}://{{hostname}}:{{port}}
+
+###
+
+# index
+GET {{origin}}/ HTTP/1.1
+
+
+
+
+###
+
+"
+`;
+
+exports[`Rest-Writer writing prefix-group.ts should match snapshot 1`] = `
+"
+@protocol = http
+@hostname = localhost
+@port     = 80
+@origin   = {{protocol}}://{{hostname}}:{{port}}
+
+###
+
+# prefix.prefix-route
+GET {{origin}}/prefix/prefix-route HTTP/1.1
+
+
+
+
+###
+
+# prefix.prefix-group.inner-group.inner-route
+GET {{origin}}/prefix/prefix-group/inner-group/inner-route HTTP/1.1
+
+
+
+
+###
+
+"
+`;
+
+exports[`Rest-Writer writing listen-object-shorthand.ts should match snapshot 1`] = `
+"
+@protocol = https
+@hostname = 127.0.0.1
+@port     = 5000
+@origin   = {{protocol}}://{{hostname}}:{{port}}
+
+###
+
+# index
+GET {{origin}}/ HTTP/1.1
+
+
+
+
+###
+
+"
+`;
+
+exports[`Rest-Writer writing response.ts should match snapshot 1`] = `
+"
+@protocol = http
+@hostname = localhost
+@port     = 80
+@origin   = {{protocol}}://{{hostname}}:{{port}}
+
+###
+
+# index
+GET {{origin}}/ HTTP/1.1
+
+
+
+
+###
+
+"
+`;
+
+exports[`Rest-Writer writing void.ts should match snapshot 1`] = `
+"
+@protocol = http
+@hostname = localhost
+@port     = 80
+@origin   = {{protocol}}://{{hostname}}:{{port}}
+
+###
+
+# index
+GET {{origin}}/ HTTP/1.1
+
+
+
+
+###
+
+"
+`;
+
+exports[`Rest-Writer writing model-condition.ts should match snapshot 1`] = `
+"
+@protocol = http
+@hostname = localhost
+@port     = 80
+@origin   = {{protocol}}://{{hostname}}:{{port}}
+
+###
+
+# index
+POST {{origin}}/ HTTP/1.1
+Content-Type: text/plain
+
+##TEST##
+
+###
+
+# index - test
+POST {{origin}}/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "##TEST##",
+  "age": 42
+}
+
+###
+
+"
+`;
+
+exports[`Rest-Writer writing prefix.ts should match snapshot 1`] = `
+"
+@protocol = http
+@hostname = localhost
+@port     = 80
+@origin   = {{protocol}}://{{hostname}}:{{port}}
+
+###
+
+# prefix.index
+GET {{origin}}/prefix HTTP/1.1
+
+
+
+
+###
+
+"
+`;
+
+exports[`Rest-Writer writing listen-port.ts should match snapshot 1`] = `
+"
+@protocol = http
+@hostname = localhost
+@port     = 8080
+@origin   = {{protocol}}://{{hostname}}:{{port}}
+
+###
+
+# index
+GET {{origin}}/ HTTP/1.1
+
+
+
+
+###
+
+"
+`;
+
+exports[`Rest-Writer writing route-intersaction.ts should match snapshot 1`] = `
+"
+@protocol = http
+@hostname = localhost
+@port     = 80
+@origin   = {{protocol}}://{{hostname}}:{{port}}
+
+###
+
+# index
+POST {{origin}}/ HTTP/1.1
+
+
+
+
+###
+
+# index
+GET {{origin}}/ HTTP/1.1
+
+
+
+
+###
+
+"
+`;
+
+exports[`Rest-Writer writing ws.ts should match snapshot 1`] = `
+"
+@protocol = http
+@hostname = localhost
+@port     = 8080
+@origin   = {{protocol}}://{{hostname}}:{{port}}
+
+###
+
+# index
+GET {{origin}}/ HTTP/1.1
+
+
+
+
+###
+
+"
+`;
+
+exports[`Rest-Writer writing model.ts should match snapshot 1`] = `
+"
+@protocol = http
+@hostname = localhost
+@port     = 80
+@origin   = {{protocol}}://{{hostname}}:{{port}}
+
+###
+
+# index - test
+POST {{origin}}/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "##TEST##",
+  "age": 42
+}
+
+###
+
+"
+`;
+
+exports[`Rest-Writer writing schema.ts should match snapshot 1`] = `
+"
+@protocol = http
+@hostname = localhost
+@port     = 80
+@origin   = {{protocol}}://{{hostname}}:{{port}}
+
+###
+
+# :param
+GET {{origin}}/##TEST## HTTP/1.1
+
+
+
+
+###
+
+"
+`;
+
+exports[`Rest-Writer writing listen-object.ts should match snapshot 1`] = `
+"
+@protocol = https
+@hostname = 127.0.0.1
+@port     = 5000
+@origin   = {{protocol}}://{{hostname}}:{{port}}
+
+###
+
+# index
+GET {{origin}}/ HTTP/1.1
+
+
+
+
+###
+
+"
+`;
