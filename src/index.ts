@@ -17,7 +17,7 @@ export const supported = {
 	levels: logger.levels
 }
 
-export type Options = {
+type Options = {
 	entrypoint: string
 	outFile: string
 	parse: parser.Options
@@ -40,13 +40,17 @@ function makeImportRelative(entrypoint: string, outFilePath: string) {
 	return relativeImport
 }
 
+export function gen(options: Options & { watch: true }): void
+export function gen(options: Options & { watch?: false }): Promise<void>
+export function gen(options: Options & { watch: boolean }): MaybePromise<void>
 export function gen({
 	entrypoint,
 	parse,
 	write,
 	outFile,
-	logging
-}: Options): MaybePromise<void> {
+	logging,
+	watch
+}: Options & { watch?: boolean }): MaybePromise<void> {
 	if (logging) {
 		logger.configure(logging)
 	}
@@ -55,7 +59,7 @@ export function gen({
 	log.info(`Using log level "${logging?.level ?? 'info'}"`)
 
 	try {
-		if (parse.$watch === true) {
+		if (watch === true) {
 			return parser.watch(entrypoint, parse, handleParse)
 		} else {
 			return parser.parse(entrypoint, parse).then(handleParse)

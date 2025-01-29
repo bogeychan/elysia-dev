@@ -1,10 +1,10 @@
 import type { OpenAPIV3 } from 'openapi-types'
 import type { Parse } from '.'
-import type { BaseParseOptions } from '../types'
+import type { BaseOptions } from '../types'
 import * as logger from '../logger'
 import * as ast from '../ast'
 
-export type Options = BaseParseOptions<'open-api'>
+export type Options = BaseOptions<'open-api'>
 
 export const parse: Parse<Options> = async (entrypoint, _options) => {
 	const log = logger.withScope('open-api', 2)

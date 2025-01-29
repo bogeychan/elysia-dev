@@ -1,4 +1,4 @@
 import type { CompilerOptions } from 'typescript'
-import type { BaseParseOptions } from '../../types'
+import type { BaseOptions } from '../../types'
 
-export type Options = BaseParseOptions<'typescript'> & CompilerOptions
+export type Options = BaseOptions<'typescript'> & CompilerOptions

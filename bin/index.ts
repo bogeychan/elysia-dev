@@ -62,14 +62,14 @@ program
 		await gen({
 			entrypoint,
 			parse: {
-				$type: parser,
-				$watch: watch
+				$type: parser
 			},
 			write: {
 				$type: writer
 			},
 			outFile,
-			logging: { level: logLevel }
+			logging: { level: logLevel },
+			watch
 		})
 	})
 
