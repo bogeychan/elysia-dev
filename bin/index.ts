@@ -69,7 +69,7 @@ program
 			},
 			outFile,
 			logging: { level: logLevel },
-			watch
+			watch: watch as boolean
 		})
 	})
 
