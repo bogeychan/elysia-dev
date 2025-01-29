@@ -24,13 +24,7 @@ Collection of development tools for [Elysia.js](https://elysiajs.com)
 > [!TIP]
 > You can freely combine parsers and writers, such as using an Open-API parser with a TypeScript writer.
 
-## CLI Usage
-
-With bun:
-
-```bash
-bunx elysia-dev --help
-```
+## Usage
 
 Structure your code like this:
 
@@ -60,7 +54,13 @@ if (process.env.NODE_ENV !== 'test') {
 }
 ```
 
-### Generate [Eden Treaty](https://elysiajs.com/eden/treaty/overview.html#eden-treaty) test file
+### CLI
+
+```bash
+bunx elysia-dev --help
+```
+
+#### Generate [Eden Treaty](https://elysiajs.com/eden/treaty/overview.html#eden-treaty) test file
 
 ```bash
 bunx elysia-dev gen ./app.ts --writer=treaty --outfile=./test.test.ts
@@ -99,7 +99,7 @@ describe('Elysia', () => {
 
 </details>
 
-### Generate [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) requests file
+#### Generate [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) requests file
 
 ```bash
 bunx elysia-dev gen ./app.ts --writer=rest --outfile=./request.http
@@ -136,7 +136,7 @@ Content-Type: application/json
 
 </details>
 
-### Generate [OpenAPI](https://swagger.io/specification/) definition file
+#### Generate [OpenAPI](https://swagger.io/specification/) definition file
 
 ```bash
 bunx elysia-dev gen ./app.ts --writer=open-api --outfile=./open-api.json
@@ -248,7 +248,7 @@ new Elysia()
 
 </details>
 
-### API Usage
+### API
 
 ```bash
 bun add elysia-dev -D

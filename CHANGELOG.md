@@ -1,3 +1,9 @@
+# 0.1.1 - 29 Jan 2025
+
+Feature:
+
+- New `watch` option to automatically restart parsing on file change
+
 # 0.1.0 - 25 Jan 2025
 
 Feature:
