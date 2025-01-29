@@ -4,7 +4,8 @@ import { gen } from '../src'
 await gen({
 	entrypoint: path.resolve(__dirname, 'app.ts'),
 	parse: {
-		$type: 'typescript'
+		$type: 'typescript',
+		$watch: false
 	},
 	outFile: path.resolve(__dirname, 'out', 'open-api.json'),
 	write: {

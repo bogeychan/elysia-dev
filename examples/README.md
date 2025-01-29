@@ -3,7 +3,7 @@
 ## Swagger
 
 ```bash
-bun run ./write.ts # generate open-api.json definition file (required once)
+bun run ./gen.ts # generate open-api.json definition file (required once)
 bun run ./app.ts # run elysia app
 ```
 

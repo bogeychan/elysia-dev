@@ -1,5 +1,9 @@
 export type BaseOptions<T extends string> = { $type: T }
 
+export type BaseParseOptions<T extends string> = BaseOptions<T> & {
+	$watch?: boolean
+}
+
 type U2O<U extends string> = {
 	[key in U]: U2O<Exclude<U, key>>
 }

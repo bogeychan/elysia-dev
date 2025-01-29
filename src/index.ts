@@ -1,4 +1,8 @@
 import path from 'node:path'
+import type { MaybePromise } from 'elysia'
+
+import type { AST } from './ast'
+
 import * as parser from './parser'
 import * as writer from './writer'
 
@@ -36,13 +40,13 @@ function makeImportRelative(entrypoint: string, outFilePath: string) {
 	return relativeImport
 }
 
-export async function gen({
+export function gen({
 	entrypoint,
 	parse,
 	write,
 	outFile,
 	logging
-}: Options) {
+}: Options): MaybePromise<void> {
 	if (logging) {
 		logger.configure(logging)
 	}
@@ -51,25 +55,35 @@ export async function gen({
 	log.info(`Using log level "${logging?.level ?? 'info'}"`)
 
 	try {
-		const elysiaAST = await parser.parse(entrypoint, parse)
-		if (!elysiaAST) {
-			return log.error(
-				'No AST available after parsing. Make sure to `export` your main elysia instance!'
-			)
+		if (parse.$watch === true) {
+			return parser.watch(entrypoint, parse, handleParse)
+		} else {
+			return parser.parse(entrypoint, parse).then(handleParse)
 		}
-
-		const outFilePath = path.resolve(outFile)
-		const relativeImport = makeImportRelative(entrypoint, outFilePath)
-
-		const content = await writer.write(elysiaAST, write, relativeImport)
-
-		log.info(`Using output file "${outFilePath}"`)
-		log.start(`Writing generated content to file...`)
-
-		await Bun.write(outFilePath, content)
-
-		log.success(`File written!`)
 	} catch (error) {
 		log.error(error)
+	}
+
+	async function handleParse(ast?: AST) {
+		try {
+			if (!ast) {
+				return log.error(
+					'No AST available after parsing. Make sure to `export` your main elysia instance!'
+				)
+			}
+			const outFilePath = path.resolve(outFile)
+			const relativeImport = makeImportRelative(entrypoint, outFilePath)
+
+			const content = await writer.write(ast, write, relativeImport)
+
+			log.info(`Using output file "${outFilePath}"`)
+			log.start(`Writing generated content to file...`)
+
+			await Bun.write(outFilePath, content)
+
+			log.success(`File written!`)
+		} catch (error) {
+			log.error(error)
+		}
 	}
 }

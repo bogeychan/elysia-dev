@@ -22,11 +22,12 @@ program
 		'typescript'
 	)
 	.requiredOption(`--writer <${supported.writers.join(' | ')}>`, 'writer')
+	.option('--watch', 'automatically restart parsing on file change')
 	.option('--outfile <string>', 'output file (test.test.ts, request.http, ...)')
 	.option(`--loglevel [${supported.levels.join(' | ')}]`, 'log level', 'info')
 	.action(async function (
 		entrypoint,
-		{ parser, outfile: outFile, writer, loglevel: logLevel }
+		{ parser, watch, outfile: outFile, writer, loglevel: logLevel }
 	) {
 		if (!supported.parsers.includes(parser)) {
 			return program.error(`Unsupported parser "${parser}"`)
@@ -61,7 +62,8 @@ program
 		await gen({
 			entrypoint,
 			parse: {
-				$type: parser
+				$type: parser,
+				$watch: watch
 			},
 			write: {
 				$type: writer
