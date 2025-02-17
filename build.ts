@@ -9,7 +9,7 @@ await Bun.build({
 	entrypoints: ['./src/index.ts'],
 	minify: true,
 	outdir,
-	external: ['commander']
+	external: ['commander', 'consola', 'typescript', '@faker-js/faker']
 })
 
 await $`tsc --project tsconfig.dts.json`
