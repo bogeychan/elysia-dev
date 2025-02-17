@@ -127,6 +127,12 @@ export function parseAST(
 		return elysiaAST
 	}
 
+	function tryGetFile(type: ts.Type, node: ts.Node): ast.TypeFile {
+		return {
+			$type: 'file'
+		}
+	}
+
 	function tryGetValueFromType(type: ts.Type, node: ts.Node): ast.TypeValue {
 		if (type.isStringLiteral() || type.isNumberLiteral()) {
 			return type.value
@@ -141,9 +147,10 @@ export function parseAST(
 
 			switch (type.symbol?.name) {
 				case 'Response':
-				case 'File':
 					object.text = type.symbol!.name
 					return object
+				case 'File':
+					return tryGetFile(type, node)
 				case 'Array':
 					object.text = 'Array'
 					if (isTypeReference(type)) {

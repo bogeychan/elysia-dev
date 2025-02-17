@@ -56,6 +56,16 @@ export function isNever(value: Type): value is TypeNever {
 export function isIntersection(value: Type): value is TypeIntersection {
 	return value.$type === 'intersection'
 }
+export function isFile(value: Type): value is TypeFile {
+	return value.$type === 'file'
+}
+export function isMultipart(value: TypeObject) {
+	return (
+		Object.values(value.entries).findIndex(
+			(entry) => isType(entry) && isFile(entry)
+		) !== -1
+	)
+}
 
 type RouteEntries =
 	| 'body'
@@ -98,6 +108,7 @@ export type Type =
 	| TypeUndefined
 	| TypeNever
 	| TypeArray
+	| TypeFile
 
 export type TypeString = {
 	$type: 'string'
@@ -146,6 +157,10 @@ export type TypeObject<E extends string = string> = {
 export type TypeArray = {
 	$type: 'array'
 	entry: TypeValue
+}
+
+export type TypeFile = {
+	$type: 'file'
 }
 
 export type TypeValue = Type | string | number | boolean | undefined

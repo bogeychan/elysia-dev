@@ -1,5 +1,5 @@
 import * as ast from '../ast'
-import { fakeTypeValue, fakeTypeValueShort } from '../faker'
+import { fakeTypeMultipart, fakeTypeValue, fakeTypeValueShort } from '../faker'
 import type { BaseOptions } from '../types'
 import { Writer } from '.'
 import * as logger from '../logger'
@@ -88,8 +88,14 @@ export class RestWriter extends Writer<Options> {
 
 		if (ast.isObject(body)) {
 			comment.push(body.text)
-			reqHeaders = `Content-Type: application/json`
-			reqBody = JSON.stringify(fakeTypeValue(body), null, '  ')
+			if (ast.isMultipart(body)) {
+				const boundary = 'abcde12345'
+				reqHeaders = `Content-Type: multipart/form-data; boundary=${boundary}`
+				reqBody = fakeTypeMultipart(body, boundary)
+			} else {
+				reqHeaders = `Content-Type: application/json`
+				reqBody = JSON.stringify(fakeTypeValue(body), null, '  ')
+			}
 		} else if (ast.isString(body) || ast.isNumber(body)) {
 			reqHeaders = `Content-Type: text/plain`
 			reqBody = `${fakeTypeValue(body)}`

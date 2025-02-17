@@ -2,914 +2,1018 @@
 
 exports[`OpenAPI-Writer writing params.ts should match snapshot 1`] = `
 "{
-\t"openapi": "3.1.0",
-\t"info": {
-\t\t"title": "Elysia Documentation",
-\t\t"description": "Development documentation",
-\t\t"version": "0.0.0"
-\t},
-\t"paths": {
-\t\t"/yay/{id}": {
-\t\t\t"get": {
-\t\t\t\t"parameters": [
-\t\t\t\t\t{
-\t\t\t\t\t\t"in": "path",
-\t\t\t\t\t\t"name": "id",
-\t\t\t\t\t\t"required": true,
-\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t},
-\t\t\t\t\t"422": {
-\t\t\t\t\t\t"description": "422",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"application/json": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "object",
-\t\t\t\t\t\t\t\t\t"properties": {
-\t\t\t\t\t\t\t\t\t\t"type": {
-\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"on": {
-\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"summary": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"message": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"found": {
-\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"property": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"expected": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t}
-\t\t},
-\t\t"/whelp/{id}/{name}": {
-\t\t\t"get": {
-\t\t\t\t"parameters": [
-\t\t\t\t\t{
-\t\t\t\t\t\t"in": "path",
-\t\t\t\t\t\t"name": "id",
-\t\t\t\t\t\t"required": true,
-\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t}
-\t\t\t\t\t},
-\t\t\t\t\t{
-\t\t\t\t\t\t"in": "path",
-\t\t\t\t\t\t"name": "name",
-\t\t\t\t\t\t"required": true,
-\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t},
-\t\t\t\t\t"422": {
-\t\t\t\t\t\t"description": "422",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"application/json": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "object",
-\t\t\t\t\t\t\t\t\t"properties": {
-\t\t\t\t\t\t\t\t\t\t"type": {
-\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"on": {
-\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"summary": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"message": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"found": {
-\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"property": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"expected": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t}
-\t\t}
-\t}
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/yay/{id}": {
+			"get": {
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					"422": {
+						"description": "422",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"type": {
+											"type": "string"
+										},
+										"on": {
+											"type": "string"
+										},
+										"summary": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"message": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"found": {
+											"nullable": true
+										},
+										"property": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"expected": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/whelp/{id}/{name}": {
+			"get": {
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "name",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					"422": {
+						"description": "422",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"type": {
+											"type": "string"
+										},
+										"on": {
+											"type": "string"
+										},
+										"summary": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"message": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"found": {
+											"nullable": true
+										},
+										"property": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"expected": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }"
 `;
 
 exports[`OpenAPI-Writer writing basic.ts should match snapshot 1`] = `
 "{
-\t"openapi": "3.1.0",
-\t"info": {
-\t\t"title": "Elysia Documentation",
-\t\t"description": "Development documentation",
-\t\t"version": "0.0.0"
-\t},
-\t"paths": {
-\t\t"/": {
-\t\t\t"get": {
-\t\t\t\t"parameters": [],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t}
-\t\t}
-\t}
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/": {
+			"get": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }"
 `;
 
 exports[`OpenAPI-Writer writing plugin.ts should match snapshot 1`] = `
 "{
-\t"openapi": "3.1.0",
-\t"info": {
-\t\t"title": "Elysia Documentation",
-\t\t"description": "Development documentation",
-\t\t"version": "0.0.0"
-\t},
-\t"paths": {
-\t\t"/": {
-\t\t\t"get": {
-\t\t\t\t"parameters": [],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t}
-\t\t}
-\t}
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/": {
+			"get": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }"
 `;
 
 exports[`OpenAPI-Writer writing prefix-group.ts should match snapshot 1`] = `
 "{
-\t"openapi": "3.1.0",
-\t"info": {
-\t\t"title": "Elysia Documentation",
-\t\t"description": "Development documentation",
-\t\t"version": "0.0.0"
-\t},
-\t"paths": {
-\t\t"/prefix/prefix-route": {
-\t\t\t"get": {
-\t\t\t\t"parameters": [],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {}
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t}
-\t\t},
-\t\t"/prefix/prefix-group/inner-group/inner-route": {
-\t\t\t"get": {
-\t\t\t\t"parameters": [],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t}
-\t\t}
-\t}
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/prefix/prefix-route": {
+			"get": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {}
+					}
+				}
+			}
+		},
+		"/prefix/prefix-group/inner-group/inner-route": {
+			"get": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }"
 `;
 
 exports[`OpenAPI-Writer writing listen-object-shorthand.ts should match snapshot 1`] = `
 "{
-\t"openapi": "3.1.0",
-\t"info": {
-\t\t"title": "Elysia Documentation",
-\t\t"description": "Development documentation",
-\t\t"version": "0.0.0"
-\t},
-\t"paths": {
-\t\t"/": {
-\t\t\t"get": {
-\t\t\t\t"parameters": [],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t}
-\t\t}
-\t}
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/": {
+			"get": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }"
 `;
 
 exports[`OpenAPI-Writer writing response.ts should match snapshot 1`] = `
 "{
-\t"openapi": "3.1.0",
-\t"info": {
-\t\t"title": "Elysia Documentation",
-\t\t"description": "Development documentation",
-\t\t"version": "0.0.0"
-\t},
-\t"paths": {
-\t\t"/": {
-\t\t\t"get": {
-\t\t\t\t"parameters": [],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"application/json": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "object",
-\t\t\t\t\t\t\t\t\t"properties": {}
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t}
-\t\t}
-\t}
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/": {
+			"get": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }"
 `;
 
 exports[`OpenAPI-Writer writing void.ts should match snapshot 1`] = `
 "{
-\t"openapi": "3.1.0",
-\t"info": {
-\t\t"title": "Elysia Documentation",
-\t\t"description": "Development documentation",
-\t\t"version": "0.0.0"
-\t},
-\t"paths": {
-\t\t"/": {
-\t\t\t"get": {
-\t\t\t\t"parameters": [],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {}
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t}
-\t\t}
-\t}
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/": {
+			"get": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {}
+					}
+				}
+			}
+		}
+	}
 }"
 `;
 
 exports[`OpenAPI-Writer writing model-condition.ts should match snapshot 1`] = `
 "{
-\t"openapi": "3.1.0",
-\t"info": {
-\t\t"title": "Elysia Documentation",
-\t\t"description": "Development documentation",
-\t\t"version": "0.0.0"
-\t},
-\t"paths": {
-\t\t"/": {
-\t\t\t"post": {
-\t\t\t\t"parameters": [],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t},
-\t\t\t\t\t"422": {
-\t\t\t\t\t\t"description": "422",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"application/json": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "object",
-\t\t\t\t\t\t\t\t\t"properties": {
-\t\t\t\t\t\t\t\t\t\t"type": {
-\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"on": {
-\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"summary": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"message": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"found": {
-\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"property": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"expected": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t},
-\t\t\t\t"requestBody": {
-\t\t\t\t\t"content": {
-\t\t\t\t\t\t"application/json": {
-\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t"type": "object",
-\t\t\t\t\t\t\t\t"properties": {
-\t\t\t\t\t\t\t\t\t"name": {
-\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t"age": {
-\t\t\t\t\t\t\t\t\t\t"type": "number"
-\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t},
-\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t},
-\t\t\t\t\t"required": true
-\t\t\t\t}
-\t\t\t}
-\t\t}
-\t}
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/": {
+			"post": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					"422": {
+						"description": "422",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"type": {
+											"type": "string"
+										},
+										"on": {
+											"type": "string"
+										},
+										"summary": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"message": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"found": {
+											"nullable": true
+										},
+										"property": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"expected": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"age": {
+										"type": "number"
+									}
+								}
+							}
+						},
+						"text/plain": {
+							"schema": {
+								"type": "string"
+							}
+						}
+					},
+					"required": true
+				}
+			}
+		}
+	}
 }"
 `;
 
 exports[`OpenAPI-Writer writing prefix.ts should match snapshot 1`] = `
 "{
-\t"openapi": "3.1.0",
-\t"info": {
-\t\t"title": "Elysia Documentation",
-\t\t"description": "Development documentation",
-\t\t"version": "0.0.0"
-\t},
-\t"paths": {
-\t\t"/prefix": {
-\t\t\t"get": {
-\t\t\t\t"parameters": [],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t}
-\t\t}
-\t}
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/prefix": {
+			"get": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }"
 `;
 
 exports[`OpenAPI-Writer writing listen-port.ts should match snapshot 1`] = `
 "{
-\t"openapi": "3.1.0",
-\t"info": {
-\t\t"title": "Elysia Documentation",
-\t\t"description": "Development documentation",
-\t\t"version": "0.0.0"
-\t},
-\t"paths": {
-\t\t"/": {
-\t\t\t"get": {
-\t\t\t\t"parameters": [],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t}
-\t\t}
-\t}
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/": {
+			"get": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}"
+`;
+
+exports[`OpenAPI-Writer writing multipart.ts should match snapshot 1`] = `
+"{
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/upload": {
+			"post": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {}
+					},
+					"422": {
+						"description": "422",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"type": {
+											"type": "string"
+										},
+										"on": {
+											"type": "string"
+										},
+										"summary": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"message": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"found": {
+											"nullable": true
+										},
+										"property": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"expected": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"requestBody": {
+					"content": {
+						"multipart/form-data": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"text": {
+										"type": "string"
+									},
+									"file": {
+										"type": "string",
+										"format": "binary"
+									}
+								}
+							}
+						}
+					},
+					"required": true
+				}
+			}
+		}
+	}
 }"
 `;
 
 exports[`OpenAPI-Writer writing route-intersaction.ts should match snapshot 1`] = `
 "{
-\t"openapi": "3.1.0",
-\t"info": {
-\t\t"title": "Elysia Documentation",
-\t\t"description": "Development documentation",
-\t\t"version": "0.0.0"
-\t},
-\t"paths": {
-\t\t"/": {
-\t\t\t"post": {
-\t\t\t\t"parameters": [],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "number"
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t},
-\t\t\t\t"requestBody": {
-\t\t\t\t\t"content": {},
-\t\t\t\t\t"required": true
-\t\t\t\t}
-\t\t\t},
-\t\t\t"get": {
-\t\t\t\t"parameters": [],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t}
-\t\t}
-\t}
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/": {
+			"post": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "number"
+								}
+							}
+						}
+					}
+				},
+				"requestBody": {
+					"content": {},
+					"required": true
+				}
+			},
+			"get": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }"
 `;
 
 exports[`OpenAPI-Writer writing ws.ts should match snapshot 1`] = `
 "{
-\t"openapi": "3.1.0",
-\t"info": {
-\t\t"title": "Elysia Documentation",
-\t\t"description": "Development documentation",
-\t\t"version": "0.0.0"
-\t},
-\t"paths": {
-\t\t"/": {
-\t\t\t"get": {
-\t\t\t\t"parameters": [],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t}
-\t\t}
-\t}
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/": {
+			"get": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }"
 `;
 
 exports[`OpenAPI-Writer writing model.ts should match snapshot 1`] = `
 "{
-\t"openapi": "3.1.0",
-\t"info": {
-\t\t"title": "Elysia Documentation",
-\t\t"description": "Development documentation",
-\t\t"version": "0.0.0"
-\t},
-\t"paths": {
-\t\t"/": {
-\t\t\t"post": {
-\t\t\t\t"parameters": [],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t},
-\t\t\t\t\t"422": {
-\t\t\t\t\t\t"description": "422",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"application/json": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "object",
-\t\t\t\t\t\t\t\t\t"properties": {
-\t\t\t\t\t\t\t\t\t\t"type": {
-\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"on": {
-\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"summary": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"message": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"found": {
-\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"property": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"expected": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t},
-\t\t\t\t"requestBody": {
-\t\t\t\t\t"content": {
-\t\t\t\t\t\t"application/json": {
-\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t"type": "object",
-\t\t\t\t\t\t\t\t"properties": {
-\t\t\t\t\t\t\t\t\t"name": {
-\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t"age": {
-\t\t\t\t\t\t\t\t\t\t"type": "number"
-\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t},
-\t\t\t\t\t"required": true
-\t\t\t\t}
-\t\t\t}
-\t\t}
-\t}
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/": {
+			"post": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					"422": {
+						"description": "422",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"type": {
+											"type": "string"
+										},
+										"on": {
+											"type": "string"
+										},
+										"summary": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"message": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"found": {
+											"nullable": true
+										},
+										"property": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"expected": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string"
+									},
+									"age": {
+										"type": "number"
+									}
+								}
+							}
+						}
+					},
+					"required": true
+				}
+			}
+		}
+	}
 }"
 `;
 
 exports[`OpenAPI-Writer writing schema.ts should match snapshot 1`] = `
 "{
-\t"openapi": "3.1.0",
-\t"info": {
-\t\t"title": "Elysia Documentation",
-\t\t"description": "Development documentation",
-\t\t"version": "0.0.0"
-\t},
-\t"paths": {
-\t\t"/{param}": {
-\t\t\t"get": {
-\t\t\t\t"parameters": [
-\t\t\t\t\t{
-\t\t\t\t\t\t"in": "path",
-\t\t\t\t\t\t"name": "param",
-\t\t\t\t\t\t"required": true,
-\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t"type": "number"
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t]
-\t\t\t\t\t\t}
-\t\t\t\t\t},
-\t\t\t\t\t{
-\t\t\t\t\t\t"in": "query",
-\t\t\t\t\t\t"name": "query",
-\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t}
-\t\t\t\t\t},
-\t\t\t\t\t{
-\t\t\t\t\t\t"in": "header",
-\t\t\t\t\t\t"name": "head",
-\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t"type": "number"
-\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t},
-\t\t\t\t\t"400": {
-\t\t\t\t\t\t"description": "400",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"application/json": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "array",
-\t\t\t\t\t\t\t\t\t"items": {
-\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t},
-\t\t\t\t\t"422": {
-\t\t\t\t\t\t"description": "422",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"application/json": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "object",
-\t\t\t\t\t\t\t\t\t"properties": {
-\t\t\t\t\t\t\t\t\t\t"type": {
-\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"on": {
-\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"summary": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"message": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"found": {
-\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"property": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t"expected": {
-\t\t\t\t\t\t\t\t\t\t\t"oneOf": [
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"nullable": true
-\t\t\t\t\t\t\t\t\t\t\t\t},
-\t\t\t\t\t\t\t\t\t\t\t\t{
-\t\t\t\t\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t\t\t]
-\t\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t}
-\t\t}
-\t}
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/{param}": {
+			"get": {
+				"parameters": [
+					{
+						"in": "path",
+						"name": "param",
+						"required": true,
+						"schema": {
+							"oneOf": [
+								{
+									"type": "string"
+								},
+								{
+									"type": "number"
+								}
+							]
+						}
+					},
+					{
+						"in": "query",
+						"name": "query",
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "header",
+						"name": "head",
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"oneOf": [
+										{
+											"type": "string"
+										},
+										{
+											"type": "number"
+										}
+									]
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "400",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					},
+					"422": {
+						"description": "422",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"type": {
+											"type": "string"
+										},
+										"on": {
+											"type": "string"
+										},
+										"summary": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"message": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"found": {
+											"nullable": true
+										},
+										"property": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										},
+										"expected": {
+											"oneOf": [
+												{
+													"nullable": true
+												},
+												{
+													"type": "string"
+												}
+											]
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }"
 `;
 
 exports[`OpenAPI-Writer writing listen-object.ts should match snapshot 1`] = `
 "{
-\t"openapi": "3.1.0",
-\t"info": {
-\t\t"title": "Elysia Documentation",
-\t\t"description": "Development documentation",
-\t\t"version": "0.0.0"
-\t},
-\t"paths": {
-\t\t"/": {
-\t\t\t"get": {
-\t\t\t\t"parameters": [],
-\t\t\t\t"responses": {
-\t\t\t\t\t"200": {
-\t\t\t\t\t\t"description": "200",
-\t\t\t\t\t\t"content": {
-\t\t\t\t\t\t\t"text/plain": {
-\t\t\t\t\t\t\t\t"schema": {
-\t\t\t\t\t\t\t\t\t"type": "string"
-\t\t\t\t\t\t\t\t}
-\t\t\t\t\t\t\t}
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t}
-\t\t\t}
-\t\t}
-\t}
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Elysia Documentation",
+		"description": "Development documentation",
+		"version": "0.0.0"
+	},
+	"paths": {
+		"/": {
+			"get": {
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "200",
+						"content": {
+							"text/plain": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }"
 `;

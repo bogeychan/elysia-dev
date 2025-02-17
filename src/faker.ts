@@ -47,6 +47,39 @@ function fakeTypeBoolean(_name?: string): boolean {
 	return faker.datatype.boolean()
 }
 
+export function fakeTypeFile(_value: ast.TypeFile, _name?: string) {
+	if (isTest) {
+		return '##FILE##'
+	}
+	return faker.string.binary({ length: 16 })
+}
+
+export function fakeTypeMultipart(
+	{ entries }: ast.TypeObject,
+	boundary: string
+) {
+	let multipart = ''
+
+	for (const name in entries) {
+		const entry = entries[name]
+		const value = fakeTypeValue(entry, name)
+		const isJson = typeof value === 'object'
+		const contentType = isJson ? 'application/json' : 'text/plain'
+
+		multipart += `
+--${boundary}
+Content-Disposition: form-data; name="${name}"
+Content-Type: ${contentType}
+
+${isJson ? JSON.stringify(value, null, '  ') : value}`
+	}
+
+	multipart += `
+--${boundary}--`
+
+	return multipart
+}
+
 export function fakeTypeValue(value: ast.TypeValue, name?: string) {
 	if (ast.isType(value)) {
 		if (ast.isObject(value)) {
@@ -57,6 +90,8 @@ export function fakeTypeValue(value: ast.TypeValue, name?: string) {
 			return fakeTypeNumber(name)
 		} else if (ast.isBoolean(value)) {
 			return fakeTypeBoolean(name)
+		} else if (ast.isFile(value)) {
+			return fakeTypeFile(value, name)
 		}
 	} else if (ast.isLiteral(value)) {
 		return value

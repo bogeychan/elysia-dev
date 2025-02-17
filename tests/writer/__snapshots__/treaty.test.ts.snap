@@ -4,23 +4,23 @@ exports[`Treaty-Writer writing params.ts should match snapshot 1`] = `
 "import { describe, it, expect } from 'bun:test'
 import { treaty } from '@elysiajs/eden'
 import { server } from './whelp'
-\t
+	
 await server.modules
 
 const api = treaty(server)
 
 describe('Elysia', () => {
-\tit('GET - /yay/:id - Response: test"', async () => {
-\t\tconst { data, error } = await api.yay({ "id": "##TEST##" }).get()
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('string')
-\t})
+	it('GET - /yay/:id - Response: test"', async () => {
+		const { data, error } = await api.yay({ "id": "##TEST##" }).get()
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
 
-\tit('GET - /whelp/:id/:name - Response: test"', async () => {
-\t\tconst { data, error } = await api.whelp({ "id": "##TEST##" })({ "name": "##TEST##" }).get()
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('string')
-\t})
+	it('GET - /whelp/:id/:name - Response: test"', async () => {
+		const { data, error } = await api.whelp({ "id": "##TEST##" })({ "name": "##TEST##" }).get()
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
 
 })"
 `;
@@ -29,17 +29,17 @@ exports[`Treaty-Writer writing basic.ts should match snapshot 1`] = `
 "import { describe, it, expect } from 'bun:test'
 import { treaty } from '@elysiajs/eden'
 import { server } from './whelp'
-\t
+	
 await server.modules
 
 const api = treaty(server)
 
 describe('Elysia', () => {
-\tit('GET - / - Response: test"', async () => {
-\t\tconst { data, error } = await api.index.get()
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('string')
-\t})
+	it('GET - / - Response: test"', async () => {
+		const { data, error } = await api.index.get()
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
 
 })"
 `;
@@ -48,17 +48,17 @@ exports[`Treaty-Writer writing plugin.ts should match snapshot 1`] = `
 "import { describe, it, expect } from 'bun:test'
 import { treaty } from '@elysiajs/eden'
 import { app } from './whelp'
-\t
+	
 await app.modules
 
 const api = treaty(app)
 
 describe('Elysia', () => {
-\tit('GET - / - Response: test"', async () => {
-\t\tconst { data, error } = await api.index.get()
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('string')
-\t})
+	it('GET - / - Response: test"', async () => {
+		const { data, error } = await api.index.get()
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
 
 })"
 `;
@@ -67,23 +67,23 @@ exports[`Treaty-Writer writing prefix-group.ts should match snapshot 1`] = `
 "import { describe, it, expect } from 'bun:test'
 import { treaty } from '@elysiajs/eden'
 import { server } from './whelp'
-\t
+	
 await server.modules
 
 const api = treaty(server)
 
 describe('Elysia', () => {
-\tit('GET - /prefix/prefix-route - Response: test"', async () => {
-\t\tconst { data, error } = await api.prefix.prefix-route.get()
-\t\texpect(error).toBeNull()
-\t\t
-\t})
+	it('GET - /prefix/prefix-route - Response: test"', async () => {
+		const { data, error } = await api.prefix.prefix-route.get()
+		expect(error).toBeNull()
+		
+	})
 
-\tit('GET - /prefix/prefix-group/inner-group/inner-route - Response: test"', async () => {
-\t\tconst { data, error } = await api.prefix.prefix-group.inner-group.inner-route.get()
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('string')
-\t})
+	it('GET - /prefix/prefix-group/inner-group/inner-route - Response: test"', async () => {
+		const { data, error } = await api.prefix.prefix-group.inner-group.inner-route.get()
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
 
 })"
 `;
@@ -92,17 +92,17 @@ exports[`Treaty-Writer writing listen-object-shorthand.ts should match snapshot 
 "import { describe, it, expect } from 'bun:test'
 import { treaty } from '@elysiajs/eden'
 import { server } from './whelp'
-\t
+	
 await server.modules
 
 const api = treaty(server)
 
 describe('Elysia', () => {
-\tit('GET - / - Response: test"', async () => {
-\t\tconst { data, error } = await api.index.get()
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('string')
-\t})
+	it('GET - / - Response: test"', async () => {
+		const { data, error } = await api.index.get()
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
 
 })"
 `;
@@ -111,17 +111,17 @@ exports[`Treaty-Writer writing response.ts should match snapshot 1`] = `
 "import { describe, it, expect } from 'bun:test'
 import { treaty } from '@elysiajs/eden'
 import { server } from './whelp'
-\t
+	
 await server.modules
 
 const api = treaty(server)
 
 describe('Elysia', () => {
-\tit('GET - / - Response: test"', async () => {
-\t\tconst { data, error } = await api.index.get()
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('object')
-\t})
+	it('GET - / - Response: test"', async () => {
+		const { data, error } = await api.index.get()
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('object')
+	})
 
 })"
 `;
@@ -130,17 +130,17 @@ exports[`Treaty-Writer writing void.ts should match snapshot 1`] = `
 "import { describe, it, expect } from 'bun:test'
 import { treaty } from '@elysiajs/eden'
 import { server } from './whelp'
-\t
+	
 await server.modules
 
 const api = treaty(server)
 
 describe('Elysia', () => {
-\tit('GET - / - Response: test"', async () => {
-\t\tconst { data, error } = await api.index.get()
-\t\texpect(error).toBeNull()
-\t\t
-\t})
+	it('GET - / - Response: test"', async () => {
+		const { data, error } = await api.index.get()
+		expect(error).toBeNull()
+		
+	})
 
 })"
 `;
@@ -149,25 +149,25 @@ exports[`Treaty-Writer writing model-condition.ts should match snapshot 1`] = `
 "import { describe, it, expect } from 'bun:test'
 import { treaty } from '@elysiajs/eden'
 import { app } from './whelp'
-\t
+	
 await app.modules
 
 const api = treaty(app)
 
 describe('Elysia', () => {
-\t// >>> UNION
-\tit('POST - / - Response: test"', async () => {
-\t\tconst { data, error } = await api.index.post("##TEST##")
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('string')
-\t})
+	// >>> UNION
+	it('POST - / - Response: test"', async () => {
+		const { data, error } = await api.index.post("##TEST##")
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
 
-\tit('POST - / - Request: test - Response: test"', async () => {
-\t\tconst { data, error } = await api.index.post({"name":"##TEST##","age":42})
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('string')
-\t})
-\t// <<< UNION
+	it('POST - / - Request: test - Response: test"', async () => {
+		const { data, error } = await api.index.post({"name":"##TEST##","age":42})
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
+	// <<< UNION
 
 })"
 `;
@@ -176,17 +176,17 @@ exports[`Treaty-Writer writing prefix.ts should match snapshot 1`] = `
 "import { describe, it, expect } from 'bun:test'
 import { treaty } from '@elysiajs/eden'
 import { app } from './whelp'
-\t
+	
 await app.modules
 
 const api = treaty(app)
 
 describe('Elysia', () => {
-\tit('GET - /prefix - Response: test"', async () => {
-\t\tconst { data, error } = await api.prefix.index.get()
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('string')
-\t})
+	it('GET - /prefix - Response: test"', async () => {
+		const { data, error } = await api.prefix.index.get()
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
 
 })"
 `;
@@ -195,17 +195,36 @@ exports[`Treaty-Writer writing listen-port.ts should match snapshot 1`] = `
 "import { describe, it, expect } from 'bun:test'
 import { treaty } from '@elysiajs/eden'
 import { server } from './whelp'
-\t
+	
 await server.modules
 
 const api = treaty(server)
 
 describe('Elysia', () => {
-\tit('GET - / - Response: test"', async () => {
-\t\tconst { data, error } = await api.index.get()
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('string')
-\t})
+	it('GET - / - Response: test"', async () => {
+		const { data, error } = await api.index.get()
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
+
+})"
+`;
+
+exports[`Treaty-Writer writing multipart.ts should match snapshot 1`] = `
+"import { describe, it, expect } from 'bun:test'
+import { treaty } from '@elysiajs/eden'
+import { server } from './whelp'
+	
+await server.modules
+
+const api = treaty(server)
+
+describe('Elysia', () => {
+	it('POST - /upload - Request: test - Response: test"', async () => {
+		const { data, error } = await api.upload.post({"text":"##TEST##","file":new File(['##FILE##'], 'file.txt', { type: 'text/plain' })})
+		expect(error).toBeNull()
+		
+	})
 
 })"
 `;
@@ -214,23 +233,23 @@ exports[`Treaty-Writer writing route-intersaction.ts should match snapshot 1`] =
 "import { describe, it, expect } from 'bun:test'
 import { treaty } from '@elysiajs/eden'
 import { server } from './whelp'
-\t
+	
 await server.modules
 
 const api = treaty(server)
 
 describe('Elysia', () => {
-\tit('POST - / - Response: test"', async () => {
-\t\tconst { data, error } = await api.index.post()
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('number')
-\t})
+	it('POST - / - Response: test"', async () => {
+		const { data, error } = await api.index.post()
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('number')
+	})
 
-\tit('GET - / - Response: test"', async () => {
-\t\tconst { data, error } = await api.index.get()
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('string')
-\t})
+	it('GET - / - Response: test"', async () => {
+		const { data, error } = await api.index.get()
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
 
 })"
 `;
@@ -239,17 +258,17 @@ exports[`Treaty-Writer writing ws.ts should match snapshot 1`] = `
 "import { describe, it, expect } from 'bun:test'
 import { treaty } from '@elysiajs/eden'
 import { app } from './whelp'
-\t
+	
 await app.modules
 
 const api = treaty(app)
 
 describe('Elysia', () => {
-\tit('GET - / - Response: test"', async () => {
-\t\tconst { data, error } = await api.index.get()
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('string')
-\t})
+	it('GET - / - Response: test"', async () => {
+		const { data, error } = await api.index.get()
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
 
 })"
 `;
@@ -258,17 +277,17 @@ exports[`Treaty-Writer writing model.ts should match snapshot 1`] = `
 "import { describe, it, expect } from 'bun:test'
 import { treaty } from '@elysiajs/eden'
 import { app } from './whelp'
-\t
+	
 await app.modules
 
 const api = treaty(app)
 
 describe('Elysia', () => {
-\tit('POST - / - Request: test - Response: test"', async () => {
-\t\tconst { data, error } = await api.index.post({"name":"##TEST##","age":42})
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('string')
-\t})
+	it('POST - / - Request: test - Response: test"', async () => {
+		const { data, error } = await api.index.post({"name":"##TEST##","age":42})
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
 
 })"
 `;
@@ -277,17 +296,17 @@ exports[`Treaty-Writer writing schema.ts should match snapshot 1`] = `
 "import { describe, it, expect } from 'bun:test'
 import { treaty } from '@elysiajs/eden'
 import { server } from './whelp'
-\t
+	
 await server.modules
 
 const api = treaty(server)
 
 describe('Elysia', () => {
-\tit('GET - /:param - Response: test"', async () => {
-\t\tconst { data, error } = await api.index({ "param": "##TEST##" }).get()
-\t\texpect(error).toBeNull()
-\t\t
-\t})
+	it('GET - /:param - Response: test"', async () => {
+		const { data, error } = await api.index({ "param": "##TEST##" }).get()
+		expect(error).toBeNull()
+		
+	})
 
 })"
 `;
@@ -296,17 +315,17 @@ exports[`Treaty-Writer writing listen-object.ts should match snapshot 1`] = `
 "import { describe, it, expect } from 'bun:test'
 import { treaty } from '@elysiajs/eden'
 import { server } from './whelp'
-\t
+	
 await server.modules
 
 const api = treaty(server)
 
 describe('Elysia', () => {
-\tit('GET - / - Response: test"', async () => {
-\t\tconst { data, error } = await api.index.get()
-\t\texpect(error).toBeNull()
-\t\texpect(data).toBeTypeOf('string')
-\t})
+	it('GET - / - Response: test"', async () => {
+		const { data, error } = await api.index.get()
+		expect(error).toBeNull()
+		expect(data).toBeTypeOf('string')
+	})
 
 })"
 `;

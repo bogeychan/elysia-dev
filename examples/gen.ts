@@ -39,7 +39,7 @@ await gen({
 // 	parse: {
 // 		$type: 'typescript'
 // 	},
-// 	outFile: path.resolve(__dirname, 'out', 'test.test.ts'),
+// 	outFile: path.resolve(__dirname, 'out', 'test.test_test.ts'),
 // 	write: {
 // 		$type: 'treaty'
 // 	}

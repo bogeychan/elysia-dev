@@ -185,6 +185,41 @@ export const app = new Elysia().get("/", () => { }, {
 "
 `;
 
+exports[`TypeScript-Writer writing multipart.ts should match snapshot 1`] = `
+"import { Elysia, t } from "elysia";
+export const app = new Elysia().post("/upload", () => { }, {
+    body: t.Object({
+        text: t.String(),
+        file: t.File()
+    }),
+    response: {
+        200: t.Void(),
+        422: t.Object({
+            type: t.Literal("validation"),
+            on: t.String(),
+            summary: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            message: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            found: t.Unknown(),
+            property: t.Union([
+                t.Undefined(),
+                t.String()
+            ]),
+            expected: t.Union([
+                t.Undefined(),
+                t.String()
+            ])
+        })
+    }
+});
+"
+`;
+
 exports[`TypeScript-Writer writing route-intersaction.ts should match snapshot 1`] = `
 "import { Elysia, t } from "elysia";
 export const app = new Elysia().post("/", () => { }, {

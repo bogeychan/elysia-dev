@@ -246,10 +246,12 @@ function schemaToType(
 				$type: 'number'
 			}
 		case 'string':
-			return {
-				$type: 'string'
+			if (schemaObj.format === 'binary') {
+				// https://swagger.io/docs/specification/v3_0/describing-request-body/multipart-requests/
+				return {
+					$type: 'file'
+				}
 			}
-		case 'object':
 			return {
 				$type: 'string'
 			}

@@ -96,3 +96,49 @@ exports[`OpenAPI-Parser parsing schema.json should match snapshot 1`] = `
   },
 }
 `;
+
+exports[`OpenAPI-Parser parsing multipart.json should match snapshot 1`] = `
+{
+  "exportName": "",
+  "origin": {
+    "hostname": "localhost",
+    "port": 80,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "upload": {
+          "$type": "object",
+          "entries": {
+            "post": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "object",
+                  "entries": {
+                    "file": {
+                      "$type": "file",
+                    },
+                    "text": {
+                      "$type": "string",
+                    },
+                  },
+                  "text": "",
+                },
+                "response": {
+                  "$type": "unknown",
+                },
+              },
+              "text": "",
+            },
+          },
+          "text": "",
+        },
+      },
+      "text": "",
+    },
+  },
+}
+`;

@@ -95,7 +95,35 @@ describe('Elysia', () => {`
 		if (ast.isType(body)) {
 			if (ast.isObject(body)) {
 				comment.push(`Request: ${body.text}`)
-				reqBody = JSON.stringify(fakeTypeValue(body))
+				const value = fakeTypeValue(body) as Record<string, any>
+
+				if (ast.isMultipart(body)) {
+					// TODO refactoring... stinky :(
+
+					reqBody = JSON.stringify(fakeTypeValue(body), (name, value) => {
+						const entry = body.entries[name]
+
+						if (ast.isType(entry) && ast.isFile(entry)) {
+							return `null#${name}`
+						}
+						return value
+					})
+
+					for (const name in body.entries) {
+						const entry = body.entries[name]
+
+						if (ast.isType(entry) && ast.isFile(entry)) {
+							reqBody = reqBody.replace(
+								`"null#${name}"`,
+								`new File(['${fakeTypeValue(
+									entry
+								)}'], '${name}.txt', { type: 'text/plain' })`
+							)
+						}
+					}
+				} else {
+					reqBody = JSON.stringify(value)
+				}
 			} else if (ast.isString(body)) {
 				reqBody = `"${fakeTypeValue(body)}"`
 			} else if (ast.isNumber(body)) {

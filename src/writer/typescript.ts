@@ -322,6 +322,16 @@ export class TypeScriptWriter extends Writer<Options> {
 					undefined,
 					[]
 				)
+			} else if (ast.isFile(type)) {
+				// t.File()
+				return ts.factory.createCallExpression(
+					ts.factory.createPropertyAccessExpression(
+						ts.factory.createIdentifier('t'),
+						ts.factory.createIdentifier('File')
+					),
+					undefined,
+					[]
+				)
 			} else if (ast.isObject(type)) {
 				// t.Object(...)
 

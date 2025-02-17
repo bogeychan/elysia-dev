@@ -866,6 +866,130 @@ exports[`TypeScript-Parser parsing listen-port.ts should match snapshot 1`] = `
 }
 `;
 
+exports[`TypeScript-Parser parsing multipart.ts should match snapshot 1`] = `
+{
+  "exportName": "server",
+  "origin": {
+    "hostname": "localhost",
+    "port": 80,
+    "protocol": "http",
+  },
+  "type": {
+    "routes": {
+      "$type": "object",
+      "entries": {
+        "upload": {
+          "$type": "object",
+          "entries": {
+            "post": {
+              "$type": "object",
+              "entries": {
+                "body": {
+                  "$type": "object",
+                  "entries": {
+                    "file": {
+                      "$type": "file",
+                    },
+                    "text": {
+                      "$type": "string",
+                    },
+                  },
+                  "text": "test",
+                },
+                "headers": {
+                  "$type": "unknown",
+                },
+                "params": {
+                  "$type": "object",
+                  "entries": {},
+                  "text": "test",
+                },
+                "query": {
+                  "$type": "unknown",
+                },
+                "response": {
+                  "$type": "object",
+                  "entries": {
+                    "200": {
+                      "$type": "void",
+                    },
+                    "422": {
+                      "$type": "object",
+                      "entries": {
+                        "expected": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "found": {
+                          "$type": "unknown",
+                        },
+                        "message": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "on": {
+                          "$type": "string",
+                        },
+                        "property": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "summary": {
+                          "$type": "union",
+                          "text": "test",
+                          "types": [
+                            {
+                              "$type": "undefined",
+                            },
+                            {
+                              "$type": "string",
+                            },
+                          ],
+                        },
+                        "type": "validation",
+                      },
+                      "text": "test",
+                    },
+                  },
+                  "text": "test",
+                },
+              },
+              "text": "test",
+            },
+          },
+          "text": "test",
+        },
+      },
+      "text": "test",
+    },
+  },
+}
+`;
+
 exports[`TypeScript-Parser parsing route-intersaction.ts should match snapshot 1`] = `
 {
   "exportName": "server",

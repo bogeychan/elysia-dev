@@ -27,7 +27,9 @@ type MediaObjectMap = {
 
 const MEDIA_TYPE = {
 	text: 'text/plain',
-	json: 'application/json'
+	json: 'application/json',
+	binary: 'application/octet-stream',
+	multipart: 'multipart/form-data'
 }
 
 export class OpenApiWriter extends Writer<Options> {
@@ -216,6 +218,11 @@ export class OpenApiWriter extends Writer<Options> {
 				return {
 					nullable: true
 				}
+			} else if (ast.isFile(value)) {
+				return {
+					type: 'string',
+					format: 'binary'
+				}
 			}
 		} else if (ast.isStringLiteral(value)) {
 			return {
@@ -312,17 +319,29 @@ export class OpenApiWriter extends Writer<Options> {
 		const schema = this.toOpenApiSchema(value)
 		let media = ''
 
-		const { type } = schema as OpenAPIV3.SchemaObject
+		const { type, format, properties } = schema as OpenAPIV3.SchemaObject
 
 		switch (type) {
 			case 'array':
 			case 'object':
 				media = MEDIA_TYPE.json
+
+				if (properties) {
+					if (
+						// contains any file?
+						(Object.values(properties) as OpenAPIV3.SchemaObject[]).findIndex(
+							({ type, format }) => type === 'string' && format === 'binary'
+						) !== -1
+					) {
+						media = MEDIA_TYPE.multipart
+					}
+				}
+
 				break
 			case 'boolean':
 			case 'number':
 			case 'string':
-				media = MEDIA_TYPE.text
+				media = format === 'binary' ? MEDIA_TYPE.binary : MEDIA_TYPE.text
 				break
 			default:
 				if (typeof type !== 'undefined') {
