@@ -2,12 +2,6 @@
 
 Collection of development tools for [Elysia.js](https://elysiajs.com)
 
-> [!CAUTION]
-> This is EXPERIMENTAL software. The CLI / API may change!
-
-> [!IMPORTANT]
-> Help improve this software by reporting any issues on GitHub
-
 ## Supported Parsers & Writers
 
 - Parsers
