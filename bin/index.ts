@@ -3,7 +3,6 @@
 import { argv } from 'bun'
 import { program } from 'commander'
 import { version, bin } from '../package.json'
-// @ts-ignore
 import { gen, supported } from '../dist/index'
 
 // ./bin/index.ts gen ./examples/app.ts --writer=treaty

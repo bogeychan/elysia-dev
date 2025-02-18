@@ -1,3 +1,15 @@
+# 0.2.0 - 18 Feb 2025
+
+Improvement:
+
+- Support basic `t.File()`
+
+Breaking Change:
+
+- `watch` option moved
+
+  For more details checkout the [migration guide](./MIGRATION.md)
+
 # 0.1.1 - 29 Jan 2025
 
 Feature:
